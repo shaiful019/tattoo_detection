@@ -3,7 +3,7 @@ import os
 image_files = []
 os.chdir(os.path.join("data", "train"))
 for filename in os.listdir(os.getcwd()):
-    if filename.endswith(".jpg"):
+    if filename.endswith(".jpg") or filename.endswith(".jpeg") or filename.endswith(".png"):
         image_files.append("data/train/" + filename)
 os.chdir("..")
 with open("train.txt", "w") as outfile:
